@@ -1,0 +1,1811 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>培训AI基座平台</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- 首页 Landing Page -->
+    <div id="landing-page" class="landing-page">
+        <!-- 首屏视频背景 -->
+        <div class="hero-video-bg">
+            <video autoplay muted loop playsinline class="hero-video">
+                <source src="https://file.ljcdn.com/nebula/背景动画1_1770283464275.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <!-- 顶部导航 -->
+        <nav class="landing-nav">
+            <div class="landing-nav-inner">
+                <div class="landing-logo">
+                    <img src="https://file.ljcdn.com/nebula/logo_1770192499582.svg" alt="Logo" class="logo-img">
+                </div>
+                <div class="landing-nav-links">
+                    <a href="#features">功能特性</a>
+                    <a href="#modules">核心模块</a>
+                    <a href="#guide">使用指南</a>
+                </div>
+                <button class="btn btn-primary" onclick="enterWorkspace()">
+                    进入工作台
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Hero 区域 -->
+        <section class="hero-section">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="badge-dot"></span>
+                    企业级AI能力平台
+                </div>
+                <h1 class="hero-title">
+                    <span class="title-line title-main">让 AI 赋能每一位员工</span>
+                    <span class="title-line title-sub gradient-text">发现AI·学习AI·使用AI</span>
+                </h1>
+                <p class="hero-subtitle">
+                    一站式AI能力发现，学习与实践平台<br>
+                    让团队能快速构建和发布AI能力
+                </p>
+                <div class="hero-actions">
+                    <button class="btn btn-primary btn-lg" onclick="enterWorkspace()">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <polygon points="10 8 16 12 10 16 10 8"/>
+                        </svg>
+                        立即体验
+                    </button>
+                    <button class="btn btn-secondary btn-lg" onclick="scrollToSection('features')">
+                        了解更多
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M6 9l6 6 6-6"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="hero-stats">
+                    <div class="hero-stat">
+                        <span class="stat-number">128+</span>
+                        <span class="stat-text">AI工具</span>
+                    </div>
+                    <div class="hero-stat">
+                        <span class="stat-number">56+</span>
+                        <span class="stat-text">培训课程</span>
+                    </div>
+                    <div class="hero-stat">
+                        <span class="stat-number">24+</span>
+                        <span class="stat-text">智能体</span>
+                    </div>
+                    <div class="hero-stat">
+                        <span class="stat-number">5000+</span>
+                        <span class="stat-text">活跃用户</span>
+                    </div>
+                </div>
+            </div>
+            <!-- 右侧占位，让左侧内容靠左 -->
+            <div class="hero-visual-placeholder"></div>
+        </section>
+
+        <!-- 功能特性 -->
+        <section id="features" class="features-section">
+            <div class="section-container">
+                <div class="section-header-center">
+                    <span class="section-tag">功能特性</span>
+                    <h2 class="section-title">为什么选择培训AI基座平台</h2>
+                    <p class="section-desc">整合企业内外部AI能力，提供一站式AI学习与实践体验</p>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-card glass-card">
+                        <div class="feature-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                                <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
+                                <line x1="12" y1="22.08" x2="12" y2="12"/>
+                            </svg>
+                        </div>
+                        <h3>AI能力聚合</h3>
+                        <p>整合豆包、ChatGPT、Claude等主流AI工具，以及企业内部AI应用，一站式访问所有AI能力</p>
+                    </div>
+                    <div class="feature-card glass-card">
+                        <div class="feature-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+                                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+                            </svg>
+                        </div>
+                        <h3>系统化培训</h3>
+                        <p>从AI入门到高级应用，提供完整的课程体系，帮助员工循序渐进掌握AI技能</p>
+                    </div>
+                    <div class="feature-card glass-card">
+                        <div class="feature-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/>
+                                <circle cx="12" cy="12" r="6"/>
+                                <circle cx="12" cy="12" r="2"/>
+                            </svg>
+                        </div>
+                        <h3>智能体工厂</h3>
+                        <p>可视化创建和管理AI智能体，无需编程即可构建专属的AI助手，提升业务效率</p>
+                    </div>
+                    <div class="feature-card glass-card">
+                        <div class="feature-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                                <polyline points="14 2 14 8 20 8"/>
+                                <line x1="16" y1="13" x2="8" y2="13"/>
+                                <line x1="16" y1="17" x2="8" y2="17"/>
+                            </svg>
+                        </div>
+                        <h3>实践案例库</h3>
+                        <p>汇集企业内部AI应用最佳实践，分享成功经验，加速AI落地应用</p>
+                    </div>
+                    <div class="feature-card glass-card">
+                        <div class="feature-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <ellipse cx="12" cy="5" rx="9" ry="3"/>
+                                <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/>
+                                <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/>
+                            </svg>
+                        </div>
+                        <h3>MCP服务集成</h3>
+                        <p>通过MCP协议连接企业数据中台，让AI智能体能够访问业务数据，实现智能决策</p>
+                    </div>
+                    <div class="feature-card glass-card">
+                        <div class="feature-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="16 18 22 12 16 6"/>
+                                <polyline points="8 6 2 12 8 18"/>
+                            </svg>
+                        </div>
+                        <h3>Vibe Coding</h3>
+                        <p>集成Cursor、Trae等AI编程工具，让开发者体验AI辅助编程的高效与便捷</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 核心模块 -->
+        <section id="modules" class="modules-section">
+            <div class="section-container">
+                <div class="section-header-center">
+                    <span class="section-tag">核心模块</span>
+                    <h2 class="section-title">平台核心功能模块</h2>
+                    <p class="section-desc">六大核心模块，覆盖AI能力发现、学习、创建、管理全流程</p>
+                </div>
+                <div class="modules-grid">
+                    <div class="module-card" onclick="enterWorkspace('ai-catalog')">
+                        <div class="module-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="11" cy="11" r="8"/>
+                                <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                            </svg>
+                        </div>
+                        <div class="module-content">
+                            <h3>AI能力目录</h3>
+                            <p>发现和探索各类AI工具，包括对话助手、图像生成、代码编写等多种能力</p>
+                        </div>
+                        <div class="module-arrow">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="module-card" onclick="enterWorkspace('courses')">
+                        <div class="module-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+                                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+                            </svg>
+                        </div>
+                        <div class="module-content">
+                            <h3>课程中心</h3>
+                            <p>系统化的AI培训课程，从入门到精通，助力员工快速掌握AI技能</p>
+                        </div>
+                        <div class="module-arrow">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="module-card" onclick="enterWorkspace('agents')">
+                        <div class="module-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/>
+                                <circle cx="12" cy="12" r="6"/>
+                                <circle cx="12" cy="12" r="2"/>
+                            </svg>
+                        </div>
+                        <div class="module-content">
+                            <h3>智能体管理</h3>
+                            <p>创建和管理AI智能体，构建专属的AI助手，自动化处理业务任务</p>
+                        </div>
+                        <div class="module-arrow">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="module-card" onclick="enterWorkspace('workflow')">
+                        <div class="module-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+                            </svg>
+                        </div>
+                        <div class="module-content">
+                            <h3>工作流编排</h3>
+                            <p>可视化编排AI工作流，串联多个AI能力，实现复杂业务场景自动化</p>
+                        </div>
+                        <div class="module-arrow">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="module-card" onclick="enterWorkspace('mcp-service')">
+                        <div class="module-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <ellipse cx="12" cy="5" rx="9" ry="3"/>
+                                <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/>
+                                <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/>
+                            </svg>
+                        </div>
+                        <div class="module-content">
+                            <h3>MCP服务管理</h3>
+                            <p>管理数据服务连接，让AI智能体能够访问企业内部数据和系统</p>
+                        </div>
+                        <div class="module-arrow">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="module-card" onclick="enterWorkspace('cases')">
+                        <div class="module-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                                <polyline points="14 2 14 8 20 8"/>
+                            </svg>
+                        </div>
+                        <div class="module-content">
+                            <h3>实践案例</h3>
+                            <p>分享和学习AI应用最佳实践，了解同事如何使用AI提升工作效率</p>
+                        </div>
+                        <div class="module-arrow">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 使用指南 -->
+        <section id="guide" class="guide-section">
+            <div class="section-container">
+                <div class="section-header-center">
+                    <span class="section-tag">使用指南</span>
+                    <h2 class="section-title">三步开启AI之旅</h2>
+                    <p class="section-desc">简单三步，快速上手平台，开始你的AI探索之旅</p>
+                </div>
+                <div class="guide-steps">
+                    <div class="guide-step">
+                        <div class="step-number">01</div>
+                        <div class="step-content">
+                            <h3>发现AI能力</h3>
+                            <p>浏览AI能力目录，发现适合你工作场景的AI工具，了解各工具的功能特点</p>
+                        </div>
+                        <div class="step-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <circle cx="11" cy="11" r="8"/>
+                                <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="guide-connector">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </div>
+                    <div class="guide-step">
+                        <div class="step-number">02</div>
+                        <div class="step-content">
+                            <h3>学习AI技能</h3>
+                            <p>参加系统化培训课程，从基础到进阶，循序渐进掌握AI应用技能</p>
+                        </div>
+                        <div class="step-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+                                <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="guide-connector">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </div>
+                    <div class="guide-step">
+                        <div class="step-number">03</div>
+                        <div class="step-content">
+                            <h3>实践与创造</h3>
+                            <p>创建专属智能体，编排AI工作流，将AI能力应用到实际工作中</p>
+                        </div>
+                        <div class="step-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 底部 CTA -->
+        <section class="cta-section">
+            <div class="section-container">
+                <div class="cta-content glass-card">
+                    <div class="cta-floating-shapes">
+                        <div class="cta-shape cta-shape-1"></div>
+                        <div class="cta-shape cta-shape-2"></div>
+                        <div class="cta-shape cta-shape-3"></div>
+                        <div class="cta-shape cta-shape-4"></div>
+                        <div class="cta-shape cta-shape-5"></div>
+                    </div>
+                    <!-- 波浪线条 -->
+                    <div class="cta-waves">
+                        <svg class="cta-wave cta-wave-1" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                            <path d="M0,60 C150,120 350,0 500,60 C650,120 850,0 1000,60 C1150,120 1200,90 1200,60 L1200,120 L0,120 Z" fill="none" stroke="rgba(62,207,142,0.15)" stroke-width="1.5"/>
+                        </svg>
+                        <svg class="cta-wave cta-wave-2" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                            <path d="M0,80 C200,20 400,100 600,50 C800,0 1000,80 1200,40" fill="none" stroke="rgba(62,207,142,0.12)" stroke-width="1"/>
+                        </svg>
+                        <svg class="cta-wave cta-wave-3" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                            <path d="M0,40 C300,100 500,20 700,70 C900,120 1100,40 1200,80" fill="none" stroke="rgba(62,207,142,0.1)" stroke-width="1"/>
+                        </svg>
+                    </div>
+                    <!-- 粒子 -->
+                    <div class="cta-particles">
+                        <span class="particle particle-1"></span>
+                        <span class="particle particle-2"></span>
+                        <span class="particle particle-3"></span>
+                        <span class="particle particle-4"></span>
+                        <span class="particle particle-5"></span>
+                        <span class="particle particle-6"></span>
+                        <span class="particle particle-7"></span>
+                        <span class="particle particle-8"></span>
+                        <span class="particle particle-9"></span>
+                        <span class="particle particle-10"></span>
+                        <span class="particle particle-11"></span>
+                        <span class="particle particle-12"></span>
+                    </div>
+                    <h2>准备好开始了吗？</h2>
+                    <p>立即进入工作台，探索AI的无限可能</p>
+                    <button class="btn btn-primary btn-lg" onclick="enterWorkspace()">
+                        进入工作台
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 页脚 -->
+        <footer class="landing-footer">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="https://file.ljcdn.com/nebula/logo_1770192499582.svg" alt="Logo" class="logo-img-sm">
+                </div>
+                <p class="footer-copyright">© 2026 培训AI基座平台. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- 工作台主界面 -->
+    <div id="workspace" class="workspace" style="display: none;">
+    <div class="app-layout">
+        <!-- 侧边栏 -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <a href="#" class="logo" onclick="goToLanding(); return false;">
+                    <img src="https://file.ljcdn.com/nebula/logo_1770192499582.svg" alt="Logo" class="logo-img">
+                </a>
+            </div>
+
+            <!-- 项目选择器 -->
+            <div class="project-selector">
+                <button class="project-btn">
+                    <div class="project-avatar">培</div>
+                    <div class="project-info">
+                        <span class="project-name">培训基座项目</span>
+                        <span class="project-id">prod-ai-foundry</span>
+                    </div>
+                    <svg class="chevron" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M4 6L8 10L12 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                    </svg>
+                </button>
+            </div>
+
+            <nav class="sidebar-nav">
+                <div class="nav-group">
+                    <a href="#" class="nav-item active" data-page="dashboard">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="3" width="7" height="7" rx="1"/>
+                            <rect x="14" y="3" width="7" height="7" rx="1"/>
+                            <rect x="3" y="14" width="7" height="7" rx="1"/>
+                            <rect x="14" y="14" width="7" height="7" rx="1"/>
+                        </svg>
+                        <span>工作台</span>
+                    </a>
+                </div>
+
+                <div class="nav-group">
+                    <div class="nav-group-label">AI应用</div>
+                    <a href="#" class="nav-item" data-page="ai-catalog">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                            <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
+                            <line x1="12" y1="22.08" x2="12" y2="12"/>
+                        </svg>
+                        <span>AI能力地图</span>
+                    </a>
+                    <a href="#" class="nav-item" data-page="courses">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+                            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+                        </svg>
+                        <span>AI课程中心</span>
+                    </a>
+                    <a href="#" class="nav-item" data-page="cases">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                            <polyline points="14 2 14 8 20 8"/>
+                            <line x1="16" y1="13" x2="8" y2="13"/>
+                            <line x1="16" y1="17" x2="8" y2="17"/>
+                            <polyline points="10 9 9 9 8 9"/>
+                        </svg>
+                        <span>实践案例</span>
+                    </a>
+                    <a href="#" class="nav-item" data-page="knowledge">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <line x1="12" y1="16" x2="12" y2="12"/>
+                            <line x1="12" y1="8" x2="12.01" y2="8"/>
+                        </svg>
+                        <span>知识库</span>
+                    </a>
+                    <a href="#" class="nav-item" data-page="smart-query">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                            <path d="M8 9h8"/>
+                            <path d="M8 13h6"/>
+                        </svg>
+                        <span>智能问数</span>
+                    </a>
+                </div>
+
+                <div class="nav-group">
+                    <div class="nav-group-label">AI工厂</div>
+                    <a href="#" class="nav-item" data-page="agents">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2a10 10 0 1 0 10 10H12V2z"/>
+                            <path d="M12 2a10 10 0 0 1 10 10"/>
+                            <circle cx="12" cy="12" r="6"/>
+                        </svg>
+                        <span>智能体广场</span>
+                    </a>
+                    <a href="#" class="nav-item" data-page="workflow">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="16 18 22 12 16 6"/>
+                            <polyline points="8 6 2 12 8 18"/>
+                        </svg>
+                        <span>工作流编排</span>
+                    </a>
+                    <a href="#" class="nav-item" data-page="mcp-service">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <ellipse cx="12" cy="5" rx="9" ry="3"/>
+                            <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/>
+                            <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/>
+                        </svg>
+                        <span>MCP管理</span>
+                    </a>
+                    <a href="#" class="nav-item" data-page="models">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                        </svg>
+                        <span>AI模型管理</span>
+                    </a>
+                    <a href="#" class="nav-item" data-page="api-manage">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                            <polyline points="22,6 12,13 2,6"/>
+                        </svg>
+                        <span>API管理</span>
+                    </a>
+                    <a href="#" class="nav-item" data-page="skills-repo">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/>
+                        </svg>
+                        <span>Skills仓库</span>
+                    </a>
+                </div>
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="user-menu">
+                    <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Felix" alt="用户头像" class="user-avatar">
+                    <div class="user-info">
+                        <span class="user-name">张三</span>
+                        <span class="user-role">AI产品经理</span>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- 主内容区 -->
+        <main class="main-content">
+            <!-- 顶部栏 -->
+            <header class="topbar">
+                <div class="breadcrumb">
+                    <span>培训基座项目</span>
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M6 4L10 8L6 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                    </svg>
+                    <span class="current">工作台</span>
+                </div>
+                <div class="topbar-actions">
+                    <div class="search-wrapper">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8"/>
+                            <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                        </svg>
+                        <input type="text" placeholder="搜索AI工具、课程、案例..." class="search-input">
+                        <kbd class="search-shortcut">⌘K</kbd>
+                    </div>
+                    <button class="icon-btn" title="通知">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/>
+                            <path d="M13.73 21a2 2 0 0 1-3.46 0"/>
+                        </svg>
+                        <span class="notification-badge">3</span>
+                    </button>
+                    <button class="icon-btn" title="设置">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="3"/>
+                            <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+                        </svg>
+                    </button>
+                </div>
+            </header>
+
+            <!-- 页面内容容器 -->
+            <div class="content-wrapper">
+                <!-- 工作台页面 -->
+                <section id="dashboard" class="page active">
+                    <div class="page-header">
+                        <div class="page-title">
+                            <h1>欢迎回来，张三</h1>
+                            <p>发现能力，提升工作效率</p>
+                        </div>
+                    </div>
+
+                    <!-- 统计卡片 -->
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-header">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                                </svg>
+                                <span class="stat-trend positive">+12%</span>
+                            </div>
+                            <div class="stat-value">128</div>
+                            <div class="stat-label">能力工具</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-header">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <rect x="5" y="4" width="14" height="17" rx="2"/>
+                                    <line x1="9" y1="9" x2="15" y2="9"/>
+                                    <line x1="9" y1="13" x2="15" y2="13"/>
+                                    <line x1="9" y1="17" x2="12" y2="17"/>
+                                </svg>
+                                <span class="stat-trend positive">+8%</span>
+                            </div>
+                            <div class="stat-value">56</div>
+                            <div class="stat-label">培训课程</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-header">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <circle cx="12" cy="12" r="6"/>
+                                    <circle cx="12" cy="12" r="2" fill="currentColor"/>
+                                </svg>
+                                <span class="stat-trend positive">+25%</span>
+                            </div>
+                            <div class="stat-value">24</div>
+                            <div class="stat-label">智能体</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-header">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                                    <polyline points="14 2 14 8 20 8"/>
+                                </svg>
+                                <span class="stat-trend positive">+15%</span>
+                            </div>
+                            <div class="stat-value">89</div>
+                            <div class="stat-label">实践案例</div>
+                        </div>
+                    </div>
+
+                    <!-- 快捷入口 -->
+                    <div class="section">
+                        <div class="section-header">
+                            <h2>快捷入口</h2>
+                        </div>
+                        <div class="quick-actions">
+                            <button class="quick-action-card" onclick="showPage('ai-catalog')">
+                                <div class="action-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="11" cy="11" r="8"/>
+                                        <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                                    </svg>
+                                </div>
+                                <span>发现工具</span>
+                            </button>
+                            <button class="quick-action-card" onclick="showPage('courses')">
+                                <div class="action-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+                                        <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+                                    </svg>
+                                </div>
+                                <span>学习课程</span>
+                            </button>
+                            <button class="quick-action-card" onclick="showPage('agents')">
+                                <div class="action-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="12" cy="12" r="10"/>
+                                        <circle cx="12" cy="12" r="6"/>
+                                        <circle cx="12" cy="12" r="2"/>
+                                    </svg>
+                                </div>
+                                <span>创建智能体</span>
+                            </button>
+                            <button class="quick-action-card" onclick="showPage('cases')">
+                                <div class="action-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/>
+                                        <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/>
+                                    </svg>
+                                </div>
+                                <span>分享案例</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- 热门工具 -->
+                    <div class="section">
+                        <div class="section-header">
+                            <h2>热门工具</h2>
+                            <a href="#" class="view-all" onclick="showPage('ai-catalog')">查看全部</a>
+                        </div>
+                        <div class="tools-grid">
+                            <div class="tool-card">
+                                <div class="tool-header">
+                                    <div class="tool-icon doubao">
+                                        <img src="https://file.ljcdn.com/nebula/icon_豆包_1770346435038.png" alt="豆包" width="32" height="32">
+                                    </div>
+                                    <div class="tool-meta">
+                                        <h3>豆包</h3>
+                                        <span class="tool-tag">对话助手</span>
+                                    </div>
+                                </div>
+                                <p class="tool-desc">字节跳动推出的AI对话助手，支持多轮对话、文档分析等功能</p>
+                                <div class="tool-footer">
+                                    <span class="tool-users">12.5k 使用</span>
+                                    <a href="https://www.doubao.com/chat/" target="_blank" class="btn btn-primary btn-sm">立即使用</a>
+                                </div>
+                            </div>
+                            <div class="tool-card">
+                                <div class="tool-header">
+                                    <div class="tool-icon cursor">
+                                        <img src="https://file.ljcdn.com/nebula/cursor_1770346435019.png" alt="Cursor" width="32" height="32">
+                                    </div>
+                                    <div class="tool-meta">
+                                        <h3>Cursor</h3>
+                                        <span class="tool-tag">编程助手</span>
+                                    </div>
+                                </div>
+                                <p class="tool-desc">AI驱动的代码编辑器，支持智能补全、代码生成和重构</p>
+                                <div class="tool-footer">
+                                    <span class="tool-users">8.2k 使用</span>
+                                    <a href="https://cursor.com/cn" target="_blank" class="btn btn-primary btn-sm">立即使用</a>
+                                </div>
+                            </div>
+                            <div class="tool-card">
+                                <div class="tool-header">
+                                    <div class="tool-icon midjourney">
+                                        <img src="https://file.ljcdn.com/nebula/icon_midjourney_1770346435004.png" alt="Midjourney" width="32" height="32">
+                                    </div>
+                                    <div class="tool-meta">
+                                        <h3>Midjourney</h3>
+                                        <span class="tool-tag">图像生成</span>
+                                    </div>
+                                </div>
+                                <p class="tool-desc">强大的AI图像生成工具，可根据文字描述创作精美图片</p>
+                                <div class="tool-footer">
+                                    <span class="tool-users">6.8k 使用</span>
+                                    <a href="https://www.midjourney.com/explore?tab=top" target="_blank" class="btn btn-primary btn-sm">立即使用</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- AI能力目录页面 -->
+                <section id="ai-catalog" class="page">
+                    <div class="page-header">
+                        <div class="page-title">
+                            <h1>AI能力目录</h1>
+                            <p>发现适合你的AI工具</p>
+                        </div>
+                        <div class="view-toggle">
+                            <button class="view-btn active" data-view="grid" title="卡片视图">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="3" y="3" width="7" height="7" rx="1"/>
+                                    <rect x="14" y="3" width="7" height="7" rx="1"/>
+                                    <rect x="3" y="14" width="7" height="7" rx="1"/>
+                                    <rect x="14" y="14" width="7" height="7" rx="1"/>
+                                </svg>
+                            </button>
+                            <button class="view-btn" data-view="list" title="列表视图">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <line x1="8" y1="6" x2="21" y2="6"/>
+                                    <line x1="8" y1="12" x2="21" y2="12"/>
+                                    <line x1="8" y1="18" x2="21" y2="18"/>
+                                    <line x1="3" y1="6" x2="3.01" y2="6"/>
+                                    <line x1="3" y1="12" x2="3.01" y2="12"/>
+                                    <line x1="3" y1="18" x2="3.01" y2="18"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="filter-bar">
+                        <div class="filter-tabs">
+                            <button class="filter-tab active" data-category="all">全部</button>
+                            <button class="filter-tab" data-category="external">外部AI产品</button>
+                            <button class="filter-tab" data-category="vibe-coding">Vibe Coding</button>
+                            <button class="filter-tab" data-category="internal">内部工具</button>
+                        </div>
+                    </div>
+                    <div class="catalog-grid">
+                        <!-- 内部AI产品 -->
+                        <a href="https://bella.ke.com/agent" target="_blank" class="catalog-card" data-category="internal">
+                            <div class="catalog-icon internal">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <circle cx="12" cy="12" r="6"/>
+                                    <circle cx="12" cy="12" r="2"/>
+                                </svg>
+                            </div>
+                            <h3>Bella</h3>
+                            <p>内部智能体平台</p>
+                        </a>
+                        <a href="https://prd.keaidesigner.ke.com/chat" target="_blank" class="catalog-card" data-category="internal">
+                            <div class="catalog-icon internal">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                                </svg>
+                            </div>
+                            <h3>Moma</h3>
+                            <p>内部AI对话</p>
+                        </a>
+                        <a href="https://linkspace.ke.com/emp" target="_blank" class="catalog-card" data-category="internal">
+                            <div class="catalog-icon internal">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/>
+                                    <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
+                                </svg>
+                            </div>
+                            <h3>LinkSpace</h3>
+                            <p>内部知识平台</p>
+                        </a>
+                        <a href="#" class="catalog-card" data-category="internal">
+                            <div class="catalog-icon internal">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                                    <circle cx="8.5" cy="8.5" r="1.5"/>
+                                    <polyline points="21 15 16 10 5 21"/>
+                                </svg>
+                            </div>
+                            <h3>AI Designer</h3>
+                            <p>内部设计工具</p>
+                        </a>
+
+                        <!-- 外部AI产品 -->
+                        <a href="https://www.doubao.com/chat" target="_blank" class="catalog-card" data-category="external">
+                            <div class="catalog-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                                </svg>
+                            </div>
+                            <h3>豆包</h3>
+                            <p>字节跳动AI助手</p>
+                        </a>
+                        <a href="https://yuanbao.tencent.com" target="_blank" class="catalog-card" data-category="external">
+                            <div class="catalog-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                                </svg>
+                            </div>
+                            <h3>腾讯元宝</h3>
+                            <p>腾讯AI助手</p>
+                        </a>
+                        <a href="https://gemini.google.com/app" target="_blank" class="catalog-card" data-category="external">
+                            <div class="catalog-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                                </svg>
+                            </div>
+                            <h3>Gemini</h3>
+                            <p>Google AI助手</p>
+                        </a>
+                        <a href="https://dreamina.com" target="_blank" class="catalog-card" data-category="external">
+                            <div class="catalog-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                                    <circle cx="8.5" cy="8.5" r="1.5"/>
+                                    <polyline points="21 15 16 10 5 21"/>
+                                </svg>
+                            </div>
+                            <h3>即梦 Dreamina</h3>
+                            <p>AI图像生成</p>
+                        </a>
+                        <a href="https://klingai.com" target="_blank" class="catalog-card" data-category="external">
+                            <div class="catalog-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polygon points="23 7 16 12 23 17 23 7"/>
+                                    <rect x="1" y="5" width="15" height="14" rx="2" ry="2"/>
+                                </svg>
+                            </div>
+                            <h3>可灵 Kling AI</h3>
+                            <p>AI视频生成</p>
+                        </a>
+                        <a href="https://chatgpt.com/" target="_blank" class="catalog-card" data-category="external">
+                            <div class="catalog-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                                </svg>
+                            </div>
+                            <h3>ChatGPT</h3>
+                            <p>OpenAI对话模型</p>
+                        </a>
+                        <a href="https://claude.ai/login" target="_blank" class="catalog-card" data-category="external">
+                            <div class="catalog-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <path d="M8 14s1.5 2 4 2 4-2 4-2"/>
+                                    <line x1="9" y1="9" x2="9.01" y2="9"/>
+                                    <line x1="15" y1="9" x2="15.01" y2="9"/>
+                                </svg>
+                            </div>
+                            <h3>Claude</h3>
+                            <p>Anthropic AI助手</p>
+                        </a>
+                        <a href="https://grok.com/" target="_blank" class="catalog-card" data-category="external">
+                            <div class="catalog-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                                </svg>
+                            </div>
+                            <h3>Grok</h3>
+                            <p>xAI对话助手</p>
+                        </a>
+                        <a href="https://www.kimi.com/" target="_blank" class="catalog-card" data-category="external">
+                            <div class="catalog-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                                </svg>
+                            </div>
+                            <h3>KIMI</h3>
+                            <p>月之暗面AI助手</p>
+                        </a>
+                        <a href="https://tongyi.aliyun.com/" target="_blank" class="catalog-card" data-category="external">
+                            <div class="catalog-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                                </svg>
+                            </div>
+                            <h3>通义千问</h3>
+                            <p>阿里云AI助手</p>
+                        </a>
+                        <a href="https://www.coze.cn/" target="_blank" class="catalog-card" data-category="external">
+                            <div class="catalog-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <circle cx="12" cy="12" r="6"/>
+                                    <circle cx="12" cy="12" r="2"/>
+                                </svg>
+                            </div>
+                            <h3>Coze 扣子</h3>
+                            <p>AI Bot构建平台</p>
+                        </a>
+                        <a href="https://www.liblib.art/" target="_blank" class="catalog-card" data-category="external">
+                            <div class="catalog-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                                    <circle cx="8.5" cy="8.5" r="1.5"/>
+                                    <polyline points="21 15 16 10 5 21"/>
+                                </svg>
+                            </div>
+                            <h3>Liblib 哩布哩布</h3>
+                            <p>AI绘画社区</p>
+                        </a>
+
+                        <!-- Vibe Coding 产品 -->
+                        <a href="https://www.trae.cn/" target="_blank" class="catalog-card" data-category="vibe-coding">
+                            <div class="catalog-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="16 18 22 12 16 6"/>
+                                    <polyline points="8 6 2 12 8 18"/>
+                                </svg>
+                            </div>
+                            <h3>Trae</h3>
+                            <p>AI编程助手</p>
+                        </a>
+                        <a href="https://www.codebuddy.ai/" target="_blank" class="catalog-card" data-category="vibe-coding">
+                            <div class="catalog-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="16 18 22 12 16 6"/>
+                                    <polyline points="8 6 2 12 8 18"/>
+                                </svg>
+                            </div>
+                            <h3>Codebuddy</h3>
+                            <p>AI编程伙伴</p>
+                        </a>
+                        <a href="https://qoder.com/" target="_blank" class="catalog-card" data-category="vibe-coding">
+                            <div class="catalog-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="16 18 22 12 16 6"/>
+                                    <polyline points="8 6 2 12 8 18"/>
+                                </svg>
+                            </div>
+                            <h3>Qoder</h3>
+                            <p>AI代码生成</p>
+                        </a>
+                        <a href="https://cursor.com/cn" target="_blank" class="catalog-card" data-category="vibe-coding">
+                            <div class="catalog-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="16 18 22 12 16 6"/>
+                                    <polyline points="8 6 2 12 8 18"/>
+                                </svg>
+                            </div>
+                            <h3>Cursor</h3>
+                            <p>AI代码编辑器</p>
+                        </a>
+                        <a href="https://kiro.dev/" target="_blank" class="catalog-card" data-category="vibe-coding">
+                            <div class="catalog-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="16 18 22 12 16 6"/>
+                                    <polyline points="8 6 2 12 8 18"/>
+                                </svg>
+                            </div>
+                            <h3>Kiro</h3>
+                            <p>AWS AI IDE</p>
+                        </a>
+                        <a href="https://www.miaoda.cn/" target="_blank" class="catalog-card" data-category="vibe-coding">
+                            <div class="catalog-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="16 18 22 12 16 6"/>
+                                    <polyline points="8 6 2 12 8 18"/>
+                                </svg>
+                            </div>
+                            <h3>秒哒</h3>
+                            <p>AI应用生成</p>
+                        </a>
+                    </div>
+                </section>
+
+                <!-- 智能体管理页面 -->
+                <section id="agents" class="page">
+                    <div class="page-header">
+                        <div class="page-title">
+                            <h1>智能体管理</h1>
+                            <p>创建和管理你的智能体</p>
+                        </div>
+                        <div class="page-actions">
+                            <div class="view-toggle">
+                                <button class="view-btn active" data-view="grid" title="卡片视图">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="3" y="3" width="7" height="7" rx="1"/>
+                                        <rect x="14" y="3" width="7" height="7" rx="1"/>
+                                        <rect x="3" y="14" width="7" height="7" rx="1"/>
+                                        <rect x="14" y="14" width="7" height="7" rx="1"/>
+                                    </svg>
+                                </button>
+                                <button class="view-btn" data-view="list" title="列表视图">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <line x1="8" y1="6" x2="21" y2="6"/>
+                                        <line x1="8" y1="12" x2="21" y2="12"/>
+                                        <line x1="8" y1="18" x2="21" y2="18"/>
+                                        <line x1="3" y1="6" x2="3.01" y2="6"/>
+                                        <line x1="3" y1="12" x2="3.01" y2="12"/>
+                                        <line x1="3" y1="18" x2="3.01" y2="18"/>
+                                    </svg>
+                                </button>
+                            </div>
+                            <button class="btn btn-primary" onclick="openModal('create-agent')">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <line x1="12" y1="5" x2="12" y2="19"/>
+                                    <line x1="5" y1="12" x2="19" y2="12"/>
+                                </svg>
+                                创建智能体
+                            </button>
+                        </div>
+                    </div>
+                    <div class="agents-grid">
+                        <div class="agent-card">
+                            <div class="agent-header">
+                                <div class="agent-avatar">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+                                        <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+                                    </svg>
+                                </div>
+                                <span class="agent-status online">运行中</span>
+                            </div>
+                            <h3>培训助手</h3>
+                            <p>帮助员工查询课程信息、学习进度和培训安排</p>
+                            <div class="agent-tags">
+                                <span class="tag">课程查询</span>
+                                <span class="tag">进度跟踪</span>
+                            </div>
+                            <div class="agent-footer">
+                                <span class="agent-calls">1.2k 调用</span>
+                                <button class="btn btn-secondary btn-sm">配置</button>
+                            </div>
+                        </div>
+                        <div class="agent-card">
+                            <div class="agent-header">
+                                <div class="agent-avatar">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M9 11l3 3L22 4"/>
+                                        <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
+                                    </svg>
+                                </div>
+                                <span class="agent-status online">运行中</span>
+                            </div>
+                            <h3>考试助手</h3>
+                            <p>智能出题、成绩分析和考试安排管理</p>
+                            <div class="agent-tags">
+                                <span class="tag">智能出题</span>
+                                <span class="tag">成绩分析</span>
+                            </div>
+                            <div class="agent-footer">
+                                <span class="agent-calls">856 调用</span>
+                                <button class="btn btn-secondary btn-sm">配置</button>
+                            </div>
+                        </div>
+                        <div class="agent-card">
+                            <div class="agent-header">
+                                <div class="agent-avatar">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <line x1="18" y1="20" x2="18" y2="10"/>
+                                        <line x1="12" y1="20" x2="12" y2="4"/>
+                                        <line x1="6" y1="20" x2="6" y2="14"/>
+                                    </svg>
+                                </div>
+                                <span class="agent-status offline">已停止</span>
+                            </div>
+                            <h3>数据分析师</h3>
+                            <p>培训数据分析、报表生成和趋势预测</p>
+                            <div class="agent-tags">
+                                <span class="tag">数据分析</span>
+                                <span class="tag">报表生成</span>
+                            </div>
+                            <div class="agent-footer">
+                                <span class="agent-calls">432 调用</span>
+                                <button class="btn btn-secondary btn-sm">配置</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 课程中心页面 -->
+                <section id="courses" class="page">
+                    <div class="page-header">
+                        <div class="page-title">
+                            <h1>AI课程中心</h1>
+                            <p>系统化学习AI知识</p>
+                        </div>
+                        <div class="view-toggle">
+                            <button class="view-btn active" data-view="grid" title="卡片视图">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="3" y="3" width="7" height="7" rx="1"/>
+                                    <rect x="14" y="3" width="7" height="7" rx="1"/>
+                                    <rect x="3" y="14" width="7" height="7" rx="1"/>
+                                    <rect x="14" y="14" width="7" height="7" rx="1"/>
+                                </svg>
+                            </button>
+                            <button class="view-btn" data-view="list" title="列表视图">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <line x1="8" y1="6" x2="21" y2="6"/>
+                                    <line x1="8" y1="12" x2="21" y2="12"/>
+                                    <line x1="8" y1="18" x2="21" y2="18"/>
+                                    <line x1="3" y1="6" x2="3.01" y2="6"/>
+                                    <line x1="3" y1="12" x2="3.01" y2="12"/>
+                                    <line x1="3" y1="18" x2="3.01" y2="18"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="course-grid">
+                        <div class="course-card">
+                            <div class="course-cover">
+                                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <circle cx="12" cy="12" r="6"/>
+                                    <circle cx="12" cy="12" r="2"/>
+                                </svg>
+                            </div>
+                            <div class="course-info">
+                                <h3>AI入门基础</h3>
+                                <p>了解AI基本概念和应用场景</p>
+                                <div class="course-meta">
+                                    <span>12课时</span>
+                                    <span>2.3k学员</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 60%"></div>
+                                </div>
+                                <span class="progress-text">已完成 60%</span>
+                            </div>
+                        </div>
+                        <div class="course-card">
+                            <div class="course-cover">
+                                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M12 2a10 10 0 1 0 10 10H12V2z"/>
+                                    <circle cx="12" cy="12" r="6"/>
+                                </svg>
+                            </div>
+                            <div class="course-info">
+                                <h3>Agent搭建训练营</h3>
+                                <p>从零开始构建AI智能体</p>
+                                <div class="course-meta">
+                                    <span>24课时</span>
+                                    <span>1.8k学员</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 30%"></div>
+                                </div>
+                                <span class="progress-text">已完成 30%</span>
+                            </div>
+                        </div>
+                        <div class="course-card">
+                            <div class="course-cover">
+                                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="16 18 22 12 16 6"/>
+                                    <polyline points="8 6 2 12 8 18"/>
+                                </svg>
+                            </div>
+                            <div class="course-info">
+                                <h3>Vibe Coding实战</h3>
+                                <p>AI辅助编程最佳实践</p>
+                                <div class="course-meta">
+                                    <span>18课时</span>
+                                    <span>1.2k学员</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 0%"></div>
+                                </div>
+                                <span class="progress-text">未开始</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 实践案例页面 -->
+                <section id="cases" class="page">
+                    <div class="page-header">
+                        <div class="page-title">
+                            <h1>实践案例广场</h1>
+                            <p>分享和学习AI实践经验</p>
+                        </div>
+                        <div class="view-toggle">
+                            <button class="view-btn" data-view="grid" title="卡片视图">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="3" y="3" width="7" height="7" rx="1"/>
+                                    <rect x="14" y="3" width="7" height="7" rx="1"/>
+                                    <rect x="3" y="14" width="7" height="7" rx="1"/>
+                                    <rect x="14" y="14" width="7" height="7" rx="1"/>
+                                </svg>
+                            </button>
+                            <button class="view-btn active" data-view="list" title="列表视图">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <line x1="8" y1="6" x2="21" y2="6"/>
+                                    <line x1="8" y1="12" x2="21" y2="12"/>
+                                    <line x1="8" y1="18" x2="21" y2="18"/>
+                                    <line x1="3" y1="6" x2="3.01" y2="6"/>
+                                    <line x1="3" y1="12" x2="3.01" y2="12"/>
+                                    <line x1="3" y1="18" x2="3.01" y2="18"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="cases-list">
+                        <article class="case-card">
+                            <div class="case-author">
+                                <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=John" alt="">
+                                <div class="author-info">
+                                    <span class="author-name">李明</span>
+                                    <span class="author-dept">培训运营部</span>
+                                </div>
+                            </div>
+                            <h3>使用AI提升课程开发效率50%</h3>
+                            <p>通过结合ChatGPT和Notion AI，我们团队的课程大纲设计时间从2天缩短到半天...</p>
+                            <div class="case-footer">
+                                <div class="case-stats">
+                                    <span>128 赞</span>
+                                    <span>32 评论</span>
+                                    <span>1.2k 浏览</span>
+                                </div>
+                                <span class="case-date">2024-01-15</span>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <!-- 知识库页面 -->
+                <section id="knowledge" class="page">
+                    <div class="page-header">
+                        <div class="page-title">
+                            <h1>知识库中心</h1>
+                            <p>AI知识沉淀与分享</p>
+                        </div>
+                    </div>
+                    <div class="empty-state">
+                        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <circle cx="12" cy="12" r="10"/>
+                            <line x1="12" y1="16" x2="12" y2="12"/>
+                            <line x1="12" y1="8" x2="12.01" y2="8"/>
+                        </svg>
+                        <h3>知识库建设中</h3>
+                        <p>我们正在整理AI相关知识，敬请期待</p>
+                    </div>
+                </section>
+
+                <!-- 智能问数页面 -->
+                <section id="smart-query" class="page">
+                    <div class="page-header">
+                        <div class="page-title">
+                            <h1>智能问数</h1>
+                            <p>通过自然语言查询数据</p>
+                        </div>
+                    </div>
+                    <div class="smart-query-container">
+                        <!-- 左侧对话列表面板 -->
+                        <div class="query-sidebar">
+                            <div class="query-sidebar-header">
+                                <span class="query-sidebar-title">智能问数</span>
+                                <button class="query-collapse-btn" title="折叠面板">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="3" y="3" width="18" height="18" rx="2"/>
+                                        <line x1="9" y1="3" x2="9" y2="21"/>
+                                    </svg>
+                                </button>
+                            </div>
+                            <button class="new-conversation-btn">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <line x1="12" y1="5" x2="12" y2="19"/>
+                                    <line x1="5" y1="12" x2="19" y2="12"/>
+                                </svg>
+                                新建对话
+                            </button>
+                            <div class="query-search-box">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="11" cy="11" r="8"/>
+                                    <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                                </svg>
+                                <input type="text" placeholder="搜索" class="query-search-input">
+                            </div>
+                            <div class="conversation-list">
+                                <div class="conversation-empty">
+                                    <span>暂无对话</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 右侧主对话区域 -->
+                        <div class="query-main">
+                            <div class="query-welcome">
+                                <div class="query-welcome-icon">
+                                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                        <path d="M3 3v18h18"/>
+                                        <path d="M18 9l-5 5-4-4-3 3"/>
+                                        <circle cx="18" cy="9" r="2"/>
+                                    </svg>
+                                </div>
+                                <h2 class="query-welcome-title">你好，我是 SQLBot</h2>
+                                <p class="query-welcome-desc">我可以查询数据、生成图表、检测数据异常、预测数据等赶快开启智能问数吧～</p>
+                            </div>
+                            <div class="query-input-container">
+                                <div class="query-input-wrapper">
+                                    <textarea
+                                        class="query-input"
+                                        placeholder="按下 Enter 提交问题，或使用 Ctrl + Enter 换行"
+                                        rows="1"
+                                    ></textarea>
+                                    <button class="query-send-btn" title="发送">
+                                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <line x1="22" y1="2" x2="11" y2="13"/>
+                                            <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 工作流编排页面 -->
+                <section id="workflow" class="page">
+                    <div class="page-header">
+                        <div class="page-title">
+                            <h1>工作流编排</h1>
+                            <p>可视化编排AI工作流</p>
+                        </div>
+                    </div>
+                    <div class="workflow-canvas">
+                        <div class="workflow-placeholder">
+                            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+                            </svg>
+                            <h3>开始创建工作流</h3>
+                            <p>拖拽组件到画布开始编排工作流</p>
+                            <button class="btn btn-primary">创建工作流</button>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- MCP服务管理页面 -->
+                <section id="mcp-service" class="page">
+                    <div class="page-header">
+                        <div class="page-title">
+                            <h1>MCP服务管理</h1>
+                            <p>管理Model Context Protocol服务</p>
+                        </div>
+                        <div class="page-actions">
+                            <div class="view-toggle">
+                                <button class="view-btn active" data-view="grid" title="卡片视图">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="3" y="3" width="7" height="7" rx="1"/>
+                                        <rect x="14" y="3" width="7" height="7" rx="1"/>
+                                        <rect x="3" y="14" width="7" height="7" rx="1"/>
+                                        <rect x="14" y="14" width="7" height="7" rx="1"/>
+                                    </svg>
+                                </button>
+                                <button class="view-btn" data-view="list" title="列表视图">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <line x1="8" y1="6" x2="21" y2="6"/>
+                                        <line x1="8" y1="12" x2="21" y2="12"/>
+                                        <line x1="8" y1="18" x2="21" y2="18"/>
+                                        <line x1="3" y1="6" x2="3.01" y2="6"/>
+                                        <line x1="3" y1="12" x2="3.01" y2="12"/>
+                                        <line x1="3" y1="18" x2="3.01" y2="18"/>
+                                    </svg>
+                                </button>
+                            </div>
+                            <button class="btn btn-primary">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <line x1="12" y1="5" x2="12" y2="19"/>
+                                    <line x1="5" y1="12" x2="19" y2="12"/>
+                                </svg>
+                                添加MCP服务
+                            </button>
+                        </div>
+                    </div>
+                    <div class="services-grid">
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+                                    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+                                </svg>
+                            </div>
+                            <h3>课程中台</h3>
+                            <p>课程信息、章节内容、学习资料</p>
+                            <span class="service-status connected">已连接</span>
+                        </div>
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M9 11l3 3L22 4"/>
+                                    <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
+                                </svg>
+                            </div>
+                            <h3>考试中台</h3>
+                            <p>题库、考试记录、成绩数据</p>
+                            <span class="service-status connected">已连接</span>
+                        </div>
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                                    <circle cx="9" cy="7" r="4"/>
+                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                                    <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                                </svg>
+                            </div>
+                            <h3>学员中台</h3>
+                            <p>学员信息、学习进度、认证记录</p>
+                            <span class="service-status pending">待连接</span>
+                        </div>
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                                    <line x1="3" y1="9" x2="21" y2="9"/>
+                                    <line x1="9" y1="21" x2="9" y2="9"/>
+                                </svg>
+                            </div>
+                            <h3>飞书文档</h3>
+                            <p>文档读取、知识库检索</p>
+                            <span class="service-status connected">已连接</span>
+                        </div>
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <line x1="2" y1="12" x2="22" y2="12"/>
+                                    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                                </svg>
+                            </div>
+                            <h3>Playwright</h3>
+                            <p>浏览器自动化、网页抓取</p>
+                            <span class="service-status connected">已连接</span>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 模型管理页面 -->
+                <section id="models" class="page">
+                    <div class="page-header">
+                        <div class="page-title">
+                            <h1>模型管理</h1>
+                            <p>统一管理AI模型配置</p>
+                        </div>
+                        <div class="view-toggle">
+                            <button class="view-btn active" data-view="grid" title="卡片视图">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="3" y="3" width="7" height="7" rx="1"/>
+                                    <rect x="14" y="3" width="7" height="7" rx="1"/>
+                                    <rect x="3" y="14" width="7" height="7" rx="1"/>
+                                    <rect x="14" y="14" width="7" height="7" rx="1"/>
+                                </svg>
+                            </button>
+                            <button class="view-btn" data-view="list" title="列表视图">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <line x1="8" y1="6" x2="21" y2="6"/>
+                                    <line x1="8" y1="12" x2="21" y2="12"/>
+                                    <line x1="8" y1="18" x2="21" y2="18"/>
+                                    <line x1="3" y1="6" x2="3.01" y2="6"/>
+                                    <line x1="3" y1="12" x2="3.01" y2="12"/>
+                                    <line x1="3" y1="18" x2="3.01" y2="18"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="models-grid">
+                        <div class="model-card">
+                            <div class="model-header">
+                                <span class="model-provider">OpenAI</span>
+                                <span class="model-status active">启用中</span>
+                            </div>
+                            <h3>GPT-4</h3>
+                            <div class="model-specs">
+                                <div class="spec">
+                                    <span class="spec-label">上下文</span>
+                                    <span class="spec-value">128k</span>
+                                </div>
+                                <div class="spec">
+                                    <span class="spec-label">速度</span>
+                                    <span class="spec-value">中等</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="model-card">
+                            <div class="model-header">
+                                <span class="model-provider">Anthropic</span>
+                                <span class="model-status active">启用中</span>
+                            </div>
+                            <h3>Claude 3</h3>
+                            <div class="model-specs">
+                                <div class="spec">
+                                    <span class="spec-label">上下文</span>
+                                    <span class="spec-value">200k</span>
+                                </div>
+                                <div class="spec">
+                                    <span class="spec-label">速度</span>
+                                    <span class="spec-value">快</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="model-card">
+                            <div class="model-header">
+                                <span class="model-provider">字节跳动</span>
+                                <span class="model-status active">启用中</span>
+                            </div>
+                            <h3>豆包大模型</h3>
+                            <div class="model-specs">
+                                <div class="spec">
+                                    <span class="spec-label">上下文</span>
+                                    <span class="spec-value">32k</span>
+                                </div>
+                                <div class="spec">
+                                    <span class="spec-label">速度</span>
+                                    <span class="spec-value">快</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- API管理页面 -->
+                <section id="api-manage" class="page">
+                    <div class="page-header">
+                        <div class="page-title">
+                            <h1>API管理</h1>
+                            <p>统一管理AI能力API接口</p>
+                        </div>
+                        <div class="page-actions">
+                            <div class="view-toggle">
+                                <button class="view-btn active" data-view="grid" title="卡片视图">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="3" y="3" width="7" height="7" rx="1"/>
+                                        <rect x="14" y="3" width="7" height="7" rx="1"/>
+                                        <rect x="3" y="14" width="7" height="7" rx="1"/>
+                                        <rect x="14" y="14" width="7" height="7" rx="1"/>
+                                    </svg>
+                                </button>
+                                <button class="view-btn" data-view="list" title="列表视图">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <line x1="8" y1="6" x2="21" y2="6"/>
+                                        <line x1="8" y1="12" x2="21" y2="12"/>
+                                        <line x1="8" y1="18" x2="21" y2="18"/>
+                                        <line x1="3" y1="6" x2="3.01" y2="6"/>
+                                        <line x1="3" y1="12" x2="3.01" y2="12"/>
+                                        <line x1="3" y1="18" x2="3.01" y2="18"/>
+                                    </svg>
+                                </button>
+                            </div>
+                            <button class="btn btn-primary">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <line x1="12" y1="5" x2="12" y2="19"/>
+                                    <line x1="5" y1="12" x2="19" y2="12"/>
+                                </svg>
+                                创建API
+                            </button>
+                        </div>
+                    </div>
+                    <div class="api-grid">
+                        <div class="api-card">
+                            <div class="api-header">
+                                <span class="api-method get">GET</span>
+                                <span class="api-status active">启用</span>
+                            </div>
+                            <h3>/api/v1/chat/completions</h3>
+                            <p>对话补全接口，支持多轮对话和流式输出</p>
+                            <div class="api-meta">
+                                <span>调用量: 12.5k/天</span>
+                                <span>延迟: 120ms</span>
+                            </div>
+                        </div>
+                        <div class="api-card">
+                            <div class="api-header">
+                                <span class="api-method post">POST</span>
+                                <span class="api-status active">启用</span>
+                            </div>
+                            <h3>/api/v1/embeddings</h3>
+                            <p>文本向量化接口，用于语义搜索和相似度计算</p>
+                            <div class="api-meta">
+                                <span>调用量: 8.2k/天</span>
+                                <span>延迟: 45ms</span>
+                            </div>
+                        </div>
+                        <div class="api-card">
+                            <div class="api-header">
+                                <span class="api-method post">POST</span>
+                                <span class="api-status active">启用</span>
+                            </div>
+                            <h3>/api/v1/agents/invoke</h3>
+                            <p>智能体调用接口，执行预定义的智能体任务</p>
+                            <div class="api-meta">
+                                <span>调用量: 3.6k/天</span>
+                                <span>延迟: 850ms</span>
+                            </div>
+                        </div>
+                        <div class="api-card">
+                            <div class="api-header">
+                                <span class="api-method get">GET</span>
+                                <span class="api-status inactive">停用</span>
+                            </div>
+                            <h3>/api/v1/knowledge/search</h3>
+                            <p>知识库检索接口，支持语义搜索和关键词匹配</p>
+                            <div class="api-meta">
+                                <span>调用量: 0/天</span>
+                                <span>延迟: --</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Skills仓库页面 -->
+                <section id="skills-repo" class="page">
+                    <div class="page-header">
+                        <div class="page-title">
+                            <h1>Skills仓库</h1>
+                            <p>管理和复用AI技能组件</p>
+                        </div>
+                        <div class="page-actions">
+                            <div class="view-toggle">
+                                <button class="view-btn active" data-view="grid" title="卡片视图">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="3" y="3" width="7" height="7" rx="1"/>
+                                        <rect x="14" y="3" width="7" height="7" rx="1"/>
+                                        <rect x="3" y="14" width="7" height="7" rx="1"/>
+                                        <rect x="14" y="14" width="7" height="7" rx="1"/>
+                                    </svg>
+                                </button>
+                                <button class="view-btn" data-view="list" title="列表视图">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <line x1="8" y1="6" x2="21" y2="6"/>
+                                        <line x1="8" y1="12" x2="21" y2="12"/>
+                                        <line x1="8" y1="18" x2="21" y2="18"/>
+                                        <line x1="3" y1="6" x2="3.01" y2="6"/>
+                                        <line x1="3" y1="12" x2="3.01" y2="12"/>
+                                        <line x1="3" y1="18" x2="3.01" y2="18"/>
+                                    </svg>
+                                </button>
+                            </div>
+                            <button class="btn btn-primary">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <line x1="12" y1="5" x2="12" y2="19"/>
+                                    <line x1="5" y1="12" x2="19" y2="12"/>
+                                </svg>
+                                上传Skill
+                            </button>
+                        </div>
+                    </div>
+                    <div class="skills-grid">
+                        <div class="skill-card">
+                            <div class="skill-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                                    <polyline points="14 2 14 8 20 8"/>
+                                    <line x1="16" y1="13" x2="8" y2="13"/>
+                                    <line x1="16" y1="17" x2="8" y2="17"/>
+                                </svg>
+                            </div>
+                            <h3>文档解析</h3>
+                            <p>支持PDF、Word、Excel等多种格式文档的智能解析</p>
+                            <div class="skill-tags">
+                                <span class="tag">文档处理</span>
+                                <span class="tag">OCR</span>
+                            </div>
+                            <div class="skill-footer">
+                                <span class="skill-version">v1.2.0</span>
+                                <span class="skill-downloads">2.3k 使用</span>
+                            </div>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="11" cy="11" r="8"/>
+                                    <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                                </svg>
+                            </div>
+                            <h3>语义搜索</h3>
+                            <p>基于向量的语义搜索能力，支持多语言</p>
+                            <div class="skill-tags">
+                                <span class="tag">搜索</span>
+                                <span class="tag">NLP</span>
+                            </div>
+                            <div class="skill-footer">
+                                <span class="skill-version">v2.0.1</span>
+                                <span class="skill-downloads">1.8k 使用</span>
+                            </div>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                                </svg>
+                            </div>
+                            <h3>对话管理</h3>
+                            <p>多轮对话上下文管理和会话状态维护</p>
+                            <div class="skill-tags">
+                                <span class="tag">对话</span>
+                                <span class="tag">上下文</span>
+                            </div>
+                            <div class="skill-footer">
+                                <span class="skill-version">v1.5.0</span>
+                                <span class="skill-downloads">3.1k 使用</span>
+                            </div>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="16 18 22 12 16 6"/>
+                                    <polyline points="8 6 2 12 8 18"/>
+                                </svg>
+                            </div>
+                            <h3>代码生成</h3>
+                            <p>支持多种编程语言的代码生成和补全</p>
+                            <div class="skill-tags">
+                                <span class="tag">编程</span>
+                                <span class="tag">生成</span>
+                            </div>
+                            <div class="skill-footer">
+                                <span class="skill-version">v1.0.0</span>
+                                <span class="skill-downloads">956 使用</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+    </div>
+    <!-- 工作台主界面结束 -->
+
+    <!-- 创建智能体弹窗 -->
+    <div id="create-agent" class="modal">
+        <div class="modal-overlay" onclick="closeModal('create-agent')"></div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>创建智能体</h2>
+                <button class="modal-close" onclick="closeModal('create-agent')">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"/>
+                        <line x1="6" y1="6" x2="18" y2="18"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label>智能体名称</label>
+                    <input type="text" class="form-input" placeholder="输入智能体名称">
+                </div>
+                <div class="form-group">
+                    <label>描述</label>
+                    <textarea class="form-input" placeholder="描述智能体的功能和用途" rows="3"></textarea>
+                </div>
+                <div class="form-group">
+                    <label>选择模型</label>
+                    <select class="form-input">
+                        <option>GPT-4</option>
+                        <option>Claude 3</option>
+                        <option>豆包大模型</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>系统提示词</label>
+                    <textarea class="form-input" rows="4" placeholder="定义智能体的行为和角色"></textarea>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" onclick="closeModal('create-agent')">取消</button>
+                <button class="btn btn-primary">创建</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
