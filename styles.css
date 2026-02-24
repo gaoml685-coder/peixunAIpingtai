@@ -4157,24 +4157,24 @@ a {
 
 /* Logo 图片样式 */
 .logo-img {
-    height: 38px;
+    height: 30px;
     width: auto;
     object-fit: contain;
 }
 
 .logo-img-sm {
-    height: 32px;
+    height: 26px;
     width: auto;
     object-fit: contain;
 }
 
 .landing-logo .logo-img {
-    height: 38px;
+    height: 30px;
     width: auto;
 }
 
 .footer-logo .logo-img-sm {
-    height: 32px;
+    height: 26px;
     width: auto;
 }
 
