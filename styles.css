@@ -960,33 +960,62 @@ body {
     width: 64px;
     height: 64px;
     margin: 0 auto 16px;
-    background: var(--brand-gradient-light);
-    border-radius: var(--radius-xl);
+    background: none;
+    border-radius: 0;
     display: flex;
     align-items: center;
     justify-content: center;
     color: var(--brand);
     position: relative;
     z-index: 1;
-    transition: var(--transition);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: visible;
+}
+
+.catalog-icon:has(img) {
+    background: none;
+    border-radius: 0;
+}
+
+.catalog-icon img {
+    width: 64px;
+    height: 64px;
+    object-fit: contain;
+    border-radius: 0;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: none;
 }
 
 .catalog-card:hover .catalog-icon {
     transform: scale(1.1);
-    background: var(--brand-gradient);
+    background: none;
     color: white;
-    box-shadow: 0 4px 16px rgba(62, 207, 142, 0.4);
+    box-shadow: none;
+}
+
+.catalog-card:hover .catalog-icon:has(img) {
+    background: none;
+    box-shadow: none;
 }
 
 .catalog-icon.internal {
-    background: linear-gradient(135deg, rgba(24, 144, 255, 0.15) 0%, rgba(24, 144, 255, 0.08) 100%);
+    background: none;
     color: var(--info);
 }
 
+.catalog-icon.internal:has(img) {
+    background: none;
+}
+
 .catalog-card:hover .catalog-icon.internal {
-    background: linear-gradient(135deg, #1890FF, #096DD9);
+    background: none;
     color: white;
-    box-shadow: 0 4px 16px rgba(24, 144, 255, 0.4);
+    box-shadow: none;
+}
+
+.catalog-card:hover .catalog-icon.internal:has(img) {
+    background: none;
+    box-shadow: none;
 }
 
 .catalog-card h3 {
