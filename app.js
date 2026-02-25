@@ -32,7 +32,7 @@ function showPage(pageId) {
     // 页面名称映射
     const pageNames = {
         'dashboard': '工作台',
-        'ai-catalog': 'AI能力目录',
+        'ai-catalog': 'AI能力地图',
         'courses': '课程中心',
         'cases': '实践案例',
         'knowledge': '知识库',
